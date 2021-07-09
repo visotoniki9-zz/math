@@ -52,9 +52,7 @@ $$
 
 > Given a list of $n$ distinct objects, how many different permutations of the objects are there?
 > Since each permutation is an ordering, start with an empty ordering which consists of $n$ positions in a line to be filled by the n objects. There are $n$ choices for which object to place in the first position. After the first object is placed, there are $n-1$ remaining objects, so there are $n-1$ choices for which object to place in the second position. Repeating this argument, there are $n-2$ choices for the third position, $n-3$ choices for the fourth position, and so on. For the $n^{th}$ position, the number of choices is $n - (n-1)= 1$. Then the rule of product implies the total number of orderings is
-
-$$n \times (n-1) \times (n-2) \times (n-3) \times \cdots \times 1 = n!$$
-
+>$$n \times (n-1) \times (n-2) \times (n-3) \times \cdots \times 1 = n!$$
 >For a positive integer $n$, the notation $n!$ denotes the factorial of n and refers to the product of all positive integers from $1$ to $n$. Note that $0!$ is the empty product and is defined to be $1$.
 
 ### Permutations with Repetition
@@ -93,3 +91,14 @@ $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 >Out of $7$ consonants and $4$ vowels, how many words of $3$ consonants and $2$ vowels can be formed?
 >The number of ways of selecting $3$ consonants out of $7$ and $2$ vowels out of $4$ is ${7\choose3}\times{4\choose2} = 210$.
 >Therefore, the number of groups each containing $3$ consonants and $2$ vowels is $210$. Since each group contains $5$ letters, which can be arranged amongst themselves in $5! = 120$ ways, the required number of words is $210 \times 120 = 25200$.  
+
+>EXAMPLE 2 Intermediate
+>We are trying to divide $5$ European countries and $5$ African countries into $5$ groups of $2$ each. How many ways are there to do this under the restriction that at least one group must have only European countries?
+>The number of ways to divide $5+5=105+5=10$ countries into $5$ groups of $2$ each is as follows:
+>$$\frac{{10\choose2} \times {8\choose2} \times {6\choose2} \times {4\choose2} \times {2\choose2}}{5 !} =\frac{ 45 \times 28 \times 15 \times 6 \times 1}{120}=945$$
+>Since it is required that at least one group must have only European countries, we need to subtract from $(1)$ the number of possible groupings where all $5$ groups have $1$ European country and $1$ African country each. This is equivalent to the number of ways to match each of the $5$ European countries with one African country:
+$5! = 5 \times 4 \times 3 \times 2 \times 1=120.  (2)$
+Therefore, taking $(1)-(2)$ gives our answer $945-120=825$.
+
+​
+<!-- TODO: Add a complex example -->
