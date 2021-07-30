@@ -1,14 +1,3 @@
-- [Linear Equations](#linear-equations)
-  - [Linear Rate of Change](#linear-rate-of-change)
-  - [Finding the Slope of a Line](#finding-the-slope-of-a-line)
-  - [Forms of Linear Equations](#forms-of-linear-equations)
-    - [Slope Intercept Form](#slope-intercept-form)
-    - [Point-Slope](#point-slope)
-    - [Standard Form](#standard-form)
-  - [Equations of Parallel and Perpendicular Lines](#equations-of-parallel-and-perpendicular-lines)
-    - [Parallel Lines](#parallel-lines)
-    - [Perpendicular Lines](#perpendicular-lines)
-  - [Intersection of Lines](#intersection-of-lines)
 # Linear Equations
 
 A linear equation is an algebraic equation that forms a straight line when graphed. Each term is either a constant, or the product of a constant and a single variable.
@@ -25,7 +14,7 @@ In this formula, y represents our final amount, m is the rate of change or the s
 
 > EXAMPLE
 > The library loses 100 books every week. If they currently have 10,000 books, how many weeks will it be before they have only 8400 books?
-> $$8400=-100x+10000$$ 
+> $$8400=-100x+10000$$
 > $$x=\frac{8400-10000}{-100}=16$$
 
 ## Finding the Slope of a Line
@@ -136,10 +125,34 @@ the two lines are perpendicular if $m_1=-\frac{1}{m_2}$,that is, if the slopes a
 > Observe that the slope of the line $y=-2x+3$ is $-2$ and the slope of the line $y=(K+1)x+4$ is $K+1$.
 > Then, since the two lines are parallel when $K=a$, it follow that
 > $$a+1=-2 \implies a=-3$$
-> Similarly, since the two lines are perpendicular when $K=b$, it follows that 
+> Similarly, since the two lines are perpendicular when $K=b$, it follows that
 > $$b+1=\frac{1}{2} \implies b=-\frac{1}{2}$$
-> Therefore, our answer is 
+> Therefore, our answer is
 > $$a+b=-3-\frac{1}{2}=-\frac{7}{2}$$
 
-
 ## Intersection of Lines
+
+Lines that are non-coincident and non-parallel intersect at a unique point. Lines are said to intersect each other if they cut each other at a point.
+
+### Point of Intersection
+
+To find the intersection of two lines, you first need the equation for each line. At the intersection, xx and yy have the same value for each equation. This means that the equations are equal to each other. We can therefore solve for xx. Substitute the value of xx in one of the equations (it does not matter which) and solve for yy.
+
+> EXAMPLE
+> Find the intersection of the lines $y=3x-3$ and $y=2.3x+4$
+> We have
+> $$3x-3=2.3x+4$$
+> $$3x-2.3x=4+3$$
+> $$0.7x=7$$
+> $$\implies x=10$$
+> $$\implies y=3(10)-3$$
+> $$ = 27$$
+
+## Other properties
+
+### Angle between the lines
+
+Angle between the lines is given by
+$$\tan{\theta}=\frac{m_1-m_2}{1+m_1m_2}$$
+where $m_1$ is the slope of the first line, $m_2$ is the slope of the second line, and $\theta$ is the angle between them.
+For two lines intersecting at a right angle, $m_1m_2=-1$
