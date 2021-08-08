@@ -13,13 +13,16 @@ The rule of sum only applies to choices that are mutually exclusive, meaning tha
 
 ## Counting Integers in a Range
 
- In a closed interval $[a,b]$, the number of integers is $b-a+1$.  
+In a closed interval $[a,b]$, the number of integers is $b-a+1$.
+
 > Example: $[1,10]=10-1+1=10$
 
- In an open interval $(a, b)$ the number of integers is $b-a-1$.  
+In an open interval $(a, b)$ the number of integers is $b-a-1$.
+
 > Example: $(1,10)=10-1-1=8$
 
- In a half-open interval $[a, b)$ or $(a,b]$, the number of integers is $b-a$.  
+In a half-open interval $[a, b)$ or $(a,b]$, the number of integers is $b-a$.
+
 > Example: $(1,10] or [1,10) = 10-1=9$
 
 ## Rule Of Product
@@ -52,17 +55,17 @@ $$
 
 > Given a list of $n$ distinct objects, how many different permutations of the objects are there?
 > Since each permutation is an ordering, start with an empty ordering which consists of $n$ positions in a line to be filled by the n objects. There are $n$ choices for which object to place in the first position. After the first object is placed, there are $n-1$ remaining objects, so there are $n-1$ choices for which object to place in the second position. Repeating this argument, there are $n-2$ choices for the third position, $n-3$ choices for the fourth position, and so on. For the $n^{th}$ position, the number of choices is $n - (n-1)= 1$. Then the rule of product implies the total number of orderings is
->$$n \times (n-1) \times (n-2) \times (n-3) \times \cdots \times 1 = n!$$
->For a positive integer $n$, the notation $n!$ denotes the factorial of n and refers to the product of all positive integers from $1$ to $n$. Note that $0!$ is the empty product and is defined to be $1$.
+> $$n \times (n-1) \times (n-2) \times (n-3) \times \cdots \times 1 = n!$$
+> For a positive integer $n$, the notation $n!$ denotes the factorial of n and refers to the product of all positive integers from $1$ to $n$. Note that $0!$ is the empty product and is defined to be $1$.
 
 ### Permutations with Repetition
 
 The number of permutations of $n$ objects with $n_1$ identical objects of type 1, $n_2$ identical objects of type 2,..., and $n_k$ identical objects of type k is
 $$\frac{n!}{n_1!n_2!...n_k!}$$
 
->EXAMPLE
->How many ways can the letters in the name RAMONA be arranged?
->Observe that the letter A appears twice and all other letters appear once in the word. If we treat the A's as distinct from each other (say $A_1$ and $A_2$), then there are $6! = 720$ ways to rearrange the letters. However, since the letters are the same, we have to divide by $2!$ to obtain $\frac{720}{2!}=360$ ways.
+> EXAMPLE
+> How many ways can the letters in the name RAMONA be arranged?
+> Observe that the letter A appears twice and all other letters appear once in the word. If we treat the A's as distinct from each other (say $A_1$ and $A_2$), then there are $6! = 720$ ways to rearrange the letters. However, since the letters are the same, we have to divide by $2!$ to obtain $\frac{720}{2!}=360$ ways.
 
 ### Permutations With Restriction
 
@@ -72,7 +75,7 @@ This is also known as $k$-permutations of $n$
 
 > EXAMPLE
 > Lisa has 13 different ornaments and wants to put 4 ornaments on her mantle. In how many ways is this possible?
->Using the product rule, Lisa has 13 choices for which ornament to put in the first position, 12 for the second position, 11 for the third position, and 10 for the fourth position. So the total number of choices she has is $13 \times 12 \times 11 \times 10$. Using the factorial notation, the total number of choices is $\frac{13!}{9!}$.
+> Using the product rule, Lisa has 13 choices for which ornament to put in the first position, 12 for the second position, 11 for the third position, and 10 for the fourth position. So the total number of choices she has is $13 \times 12 \times 11 \times 10$. Using the factorial notation, the total number of choices is $\frac{13!}{9!}$.
 
 ## Combinations
 
@@ -87,18 +90,39 @@ This is a binomial coefficient.
 
 $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
->EXAMPLE 1 Basic
->Out of $7$ consonants and $4$ vowels, how many words of $3$ consonants and $2$ vowels can be formed?
->The number of ways of selecting $3$ consonants out of $7$ and $2$ vowels out of $4$ is ${7\choose3}\times{4\choose2} = 210$.
->Therefore, the number of groups each containing $3$ consonants and $2$ vowels is $210$. Since each group contains $5$ letters, which can be arranged amongst themselves in $5! = 120$ ways, the required number of words is $210 \times 120 = 25200$.  
+> EXAMPLE 1 Basic
+> Out of $7$ consonants and $4$ vowels, how many words of $3$ consonants and $2$ vowels can be formed?
+> The number of ways of selecting $3$ consonants out of $7$ and $2$ vowels out of $4$ is ${7\choose3}\times{4\choose2} = 210$.
+> Therefore, the number of groups each containing $3$ consonants and $2$ vowels is $210$. Since each group contains $5$ letters, which can be arranged amongst themselves in $5! = 120$ ways, the required number of words is $210 \times 120 = 25200$.
 
->EXAMPLE 2 Intermediate
->We are trying to divide $5$ European countries and $5$ African countries into $5$ groups of $2$ each. How many ways are there to do this under the restriction that at least one group must have only European countries?
->The number of ways to divide $5+5=105+5=10$ countries into $5$ groups of $2$ each is as follows:
->$$\frac{{10\choose2} \times {8\choose2} \times {6\choose2} \times {4\choose2} \times {2\choose2}}{5 !} =\frac{ 45 \times 28 \times 15 \times 6 \times 1}{120}=945$$
->Since it is required that at least one group must have only European countries, we need to subtract from $(1)$ the number of possible groupings where all $5$ groups have $1$ European country and $1$ African country each. This is equivalent to the number of ways to match each of the $5$ European countries with one African country:
-$5! = 5 \times 4 \times 3 \times 2 \times 1=120.  (2)$
-Therefore, taking $(1)-(2)$ gives our answer $945-120=825$.
+> EXAMPLE 2 Intermediate
+> We are trying to divide $5$ European countries and $5$ African countries into $5$ groups of $2$ each. How many ways are there to do this under the restriction that at least one group must have only European countries?
+> The number of ways to divide $5+5=10$ countries into $5$ groups of $2$ each is as follows:
+> $$\frac{{10\choose2} \times {8\choose2} \times {6\choose2} \times {4\choose2} \times {2\choose2}}{5 !} =\frac{ 45 \times 28 \times 15 \times 6 \times 1}{120}=945$$
+> Since it is required that at least one group must have only European countries, we need to subtract from $(1)$ the number of possible groupings where all $5$ groups have $1$ European country and $1$ African country each. This is equivalent to the number of ways to match each of the $5$ European countries with one African country:
+> $5! = 5 \times 4 \times 3 \times 2 \times 1=120.  (2)$
+> Therefore, taking $(1)-(2)$ gives our answer $945-120=825$.
 
-​
-<!-- TODO: Add a complex example -->
+## Combinations with Repetition
+
+> EXAMPLE
+> You want to distribute 7 indistinguishable candies to 4 kids. If every kid must receive at least one candy, in how many ways can you do this?
+> You first give one candy to each of the 4 kids to comply with the requirement that every kid must receive at least one candy. Then you are left with 3 candies to distribute to the 4 kids,
+> which is equivalent to a problem of placing k = 3 indistinguishable balls into n=4 labeled urns, which is a balls and urns or stars and bars. Thus, our answer is
+> $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}=\binom{3+4-1}{3}=20$$
+
+## Combinations with Restrictions
+
+> Example
+> Let $x+y+z=m$ where $x,y,z$ are integers such that $x\geq 1, y\geq 2, z\geq 3$. If the number of ordered triples $(x,y,z)$ satisfying the equation is 21, what is m?
+> Let $x-1=a, y-2=b, z-3=c$, where $a,b,c$ are non-negative because $x\geq 1, y\geq 2, z\geq 3$ then
+> $$x+y+z=m$$  
+> $$(a+1)+(b+2)+(c+3)=m$$  
+> $$a+b+c=m-6$$  
+> Since the number of ordered non-negative integer triples $a,b,c$ satisfying is 21, using the technique of stars and bars, we obtain
+> $$\binom{3+(m-6)-1}{m-6}=\binom{m-4}{m-6}+\binom{m-4}{2}=21$$  
+> $$\frac{(m-4)(m-5)}{2!}=21$$  
+> $$m^2-9m+20=42$$  
+> $$m^2-9m-22=0$$  
+> $$(m+2)(m-11)=0$$  
+> $$m=11$$
