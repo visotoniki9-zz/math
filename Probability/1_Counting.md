@@ -38,7 +38,7 @@ The rule of product states that if there are $n$ ways of doing something, and $m
 
 ## Permutations
 
-In combinatorics, a permutation is an ordering of a list of objects. For example, arranging four people in a line is equivalent to finding permutations of four objects. More abstractly, each of the following is a permutation of the letters a, b, c,a,b,c, and dd:
+In combinatorics, a permutation is an ordering of a list of objects. For example, arranging four people in a line is equivalent to finding permutations of four objects. More abstractly, each of the following is a permutation of the letters a, b, c,a,b,c, and d:
 
 $$
 \begin{aligned}
